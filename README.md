@@ -9,6 +9,18 @@ To run the software described here, you will need the following
 * The IDL PINTofALE software (https://hea-www.harvard.edu/PINTofALE/)
 * The ch_dem IDL GitHub repository (https://github.com/pryoung/ch_dem.git)
 
+## Initial set up
+You need to add the GitHub directories and the PINTofALE software to your IDL path. For example,
+
+> IDL> !PATH='+$HOME/codes/PINTofALE:+$HOME/github/ch_dem:+$HOME/github/paper_2025_eis_calib/:'+!PATH
+
+> IDL> !PATH=expand_path(!PATH)
+
+You can add the above lines to your idl_startup file to save running them each time you start IDL. 
+
+Create a new directory that will contain the output files, and run the IDL software from there.
+
+
 ## File summary
 |File|Type|Format|Summary|
 |----|----|------|-------|
