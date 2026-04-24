@@ -12,9 +12,8 @@ To run the software described here, you will need the following
 ## Initial set up
 You need to add the GitHub directories and the PINTofALE software to your IDL path. For example,
 
-> IDL> !PATH='+$HOME/codes/PINTofALE:+$HOME/github/ch_dem:+$HOME/github/paper_2025_eis_calib/:'+!PATH
-
-> IDL> !PATH=expand_path(!PATH)
+    IDL> !PATH='+$HOME/codes/PINTofALE:+$HOME/github/ch_dem:+$HOME/github/paper_2025_eis_calib/:'+!PATH
+    IDL> !PATH=expand_path(!PATH)
 
 You can add the above lines to your idl_startup file to save running them each time you start IDL. 
 
@@ -24,7 +23,6 @@ Create a new directory that will contain the output files, and run the IDL softw
 ## File summary
 |File|Type|Format|Summary|
 |----|----|------|-------|
-|ch_continuum.pro|IDL routine|text|Calculates the continuum spectrum using CHIANTI|
 |continuum_processing_script.pro|IDL routine|text|Script for deriving DEMs and effective area curves|
 |continuum_spline_fit.pro|IDL routine|text|Performs a spline to the measured continuum intensities |
 |continuum_spline_fit_fn.pro|IDL routine|text|Defines the continuum fit function|
@@ -38,21 +36,9 @@ Create a new directory that will contain the output files, and run the IDL softw
 ## Relation to article
 The IDL routines provided in this directory allow the user to generate the DEM curve, flare spectrum and effective area curves that are presented in the article. This can be done by doing the following in IDL.
 
-> IDL> continuum_processing_script
+    IDL> continuum_processing_script
  
-Make sure you have installed the SolarSoft and PINTofALE packages described above. It is recommended that you add the PINTofALE software to your IDL path by doing:
+Date files used by the script are in the subdirectory "data". See the [README file](data/README.md). If you follow the setup instructions above, the script will automatically find the data files.
 
-> IDL> !PATH='+/Users/$USER/codes/PINTofALE:'+!PATH
-> 
-> IDL> !PATH=expand_path(!PATH)
+The figures in the article are generated through the IDL routines in the subdirectory "figures". See the [README file](figures/README.md).
 
-
-## items to include
-* summary of all files in the deposit [required]
-* formats for all data and software files [required]
-* relationship between  the files and the article [required]
-* units for all columns/data dimensions of data files [required]
-* references to the sources of these data [required for DOI repository deposits]
-* related links to other locations for the submitted data [optional], description of software to open and use files
-
-  
