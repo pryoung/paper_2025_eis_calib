@@ -76,7 +76,8 @@ function plot_flare_dem
     ioneq_file = ioneq_file, adv = 0, /phot)
 
   scl = 1e12
-  q = plot(o2.ltemp, reform(c.int) * 10. ^ o2.ltemp * o2.dem * alog(10.) * 0.1 / scl, $
+  f=reform(c.int) * 10. ^ o2.ltemp * o2.dem * alog(10.) * 0.1
+  q = plot(o2.ltemp, f / scl, $
     /stairstep, $
     th = th, font_size = fs, /current, xsty = 3, $
     xth = th, yth = th, $
@@ -86,6 +87,9 @@ function plot_flare_dem
     xtitle = 'Log ( Temperature (K) )', $
     ytitle = 'P!d!9l!3!n ( x10!u12!n photon cm!u-2!n s!u-1!n sr!u-1!n ' + string(197b) + '!u-1!n )')
 
+  k=where(o2.ltemp GE 6.85 AND o2.ltemp LE 7.15)
+  print,format='("Percentage of continuum from 6.85 to 7.15: ",f6.1)',total(f[k])/total(f)*100.
+  
   q2 = plot(o2.ltemp, reform(c.int_fb) * 10. ^ o2.ltemp * o2.dem * alog(10.) * 0.1 / scl, $
     /stairstep, $
     color = 'blue', /overplot, th = th)
