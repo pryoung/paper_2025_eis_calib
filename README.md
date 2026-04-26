@@ -5,7 +5,7 @@ Supporting data and software for the article "Modeling Flare Continuum Emission 
 To run the software described here, you will need the following
 * IDL
 * The IDL SolarSoft system (https://sohoftp.nascom.nasa.gov/solarsoft/)
-* The SolarSoft packages: Hinode/EIS, CHIANTI
+* The SolarSoft packages: Hinode/EIS, CHIANTI, SDO/AIA
 * The IDL PINTofALE software (https://hea-www.harvard.edu/PINTofALE/)
 * The ch_dem IDL GitHub repository (https://github.com/pryoung/ch_dem.git)
 
