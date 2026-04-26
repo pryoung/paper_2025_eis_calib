@@ -36,6 +36,6 @@ The observed spectra in 20240930_225718_continuum_bg.sav and 20240930_225718_con
 the routine make_bg_subtracted_continuum_spectrum.pro to yield the background-subtracted continuum spectrum from which the 
 continuum intensities (sw_ and lw_continuum_ints.txt) are measured using the SSW routine spec_gauss_eis.pro (use the /continuum keyword).
 
-The flare emission line intensities in spec_gauss_fits_calib0.txt are measure from the spectrum in 20240930_225718_continuum_spec_calib0.sav 
+The flare emission line intensities in spec_gauss_fits_calib0.txt are measured from the spectrum in 20240930_225718_continuum_spec_calib0.sav 
 using  the SSW Gaussian fitting routine spec_gauss_eis.pro.
 

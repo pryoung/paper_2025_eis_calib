@@ -2,6 +2,12 @@
 
 The IDL routines in this directory generate the figures for the article "Modeling Flare Continuum Emission Observed by Hinode/EIS: Instrument Calibration and Element Composition Results" by Peter R. Young and Biswajit Mondal.
 
+Each routine is run in the same way with a command such as:
+
+    IDL> w=plot_continuum_properties()
+
+where w is the plot object that is created. No inputs are required for the routines since they automatically access data in the repository. Each routine automatically saves the displayed image to the working directory with a filename such as plot_continuum_properties.png.
+
 ## File summary
 |File|Type|Format|Summary|
 |----|----|------|-------|
